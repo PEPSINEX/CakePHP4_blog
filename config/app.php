@@ -357,6 +357,7 @@ return [
             'url' => env('LOG_DEBUG_URL', null),
             'scopes' => false,
             'levels' => ['notice', 'info', 'debug'],
+            'mask' => 0666,
         ],
         'error' => [
             'className' => FileLog::class,
@@ -365,6 +366,7 @@ return [
             'url' => env('LOG_ERROR_URL', null),
             'scopes' => false,
             'levels' => ['warning', 'error', 'critical', 'alert', 'emergency'],
+            'mask' => 0666,
         ],
         // To enable this dedicated query log, you need set your datasource's log flag to true
         'queries' => [
